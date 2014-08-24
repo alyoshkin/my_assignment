@@ -179,11 +179,33 @@ shinyUI(pageWithSidebar(
                 'Venezuela'='Venezuela',
                 'Int. organisations'='Int. organisations'
             ), multiple = TRUE
-        )),
+        )
+        ,
+        p("In this application I made a visual representation of
+        International debt securities by residence of issuer.
+        The data was taken on Bank for International Settlements web page"),
+        br(),
+        p("1. Choose some countries in this toolbox, 
+multiple choice is supported to make a comparison 
+berween regions. Also choose years you are interested in.
+You will see corresponding graphs below."),
+        br(),
+        p("2.Switch to 'Table'. 
+You can make additional search and sort 
+by any parameter."),
+        br(),
+        p("3.'Summary statistics' - this is summary function from R"),
+        br(),
+        p("4.'Geographical map' No comments needed. everything is pretty obvious 
+            : ) ")
+        
+        ),
     
     
     tabsetPanel(type = "tabs", 
-                tabPanel("Graph", plotOutput("freqPlot")), 
+                tabPanel("Graph",       
+                         
+                plotOutput("freqPlot")), 
                 tabPanel("Table",
                          dataTableOutput("mytable1")
                 ),
